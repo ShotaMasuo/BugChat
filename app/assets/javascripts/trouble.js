@@ -27,6 +27,9 @@ $(function(){
   let detail_list = $(".rightwrapper")
   function appendDetail(trouble){
     let html = `
+                <div id="edit-button">
+                  <a href="/troubles/${trouble.id}/edit">編集</a>
+                </div>
                 <ul class="rightwrapper__list">
                   <li class="rightwrapper__list__item errmessage">
                     <p class="title">エラーメッセージ：</p>
@@ -34,11 +37,11 @@ $(function(){
                   </li>
                   <li class="rightwrapper__list__item">
                     <p class="title">エラー画面：</p>
-                    <p class="content">${trouble.err_screen}</p>
+                    <p class="content"><a href="${trouble.err_screen}" target="_blank" rel="noopener noreferrer">${trouble.err_screen}</a></p>
                   </li>
                   <li class="rightwrapper__list__item solveurl">
                     <p class="title">参考URL：</p>
-                    <p class="content">${trouble.solve_url}</p>
+                    <p class="content"><a href="${trouble.solve_url}" target="_blank" rel="noopener noreferrer">${trouble.solve_url}</a></p>
                   </li>
                   <li class="rightwrapper__list__item consider">
                     <p class="title">エラー発生理由：</p>

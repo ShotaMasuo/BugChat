@@ -22,6 +22,17 @@ class TroublesController < ApplicationController
       render :new
     end
   end
+  def edit
+    @trouble = Trouble.find(params[:id])
+  end
+  def update
+    @trouble = Trouble.find(params[:id])
+    if @trouble.update(trouble_params)
+      redirect_to root_path
+    else
+      render edit
+    end
+  end
   def show
     @trouble = Trouble.find(params[:id])
   end

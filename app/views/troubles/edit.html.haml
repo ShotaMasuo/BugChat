@@ -1,0 +1,14 @@
+.formcontainer
+  = form_with model: @trouble, local: true do |f|
+    .inputcontainer
+      %p エラーメッセージ 
+      = f.text_area :content
+      %p エラー画面（Gyazo URL）
+      = f.text_field :err_screen
+      %p 参考サイトのURL
+      = f.text_field :solve_url
+      %p エラーの理由
+      = f.text_area :consider
+      %p 解決手順
+      = f.text_area :conduct
+      = f.submit "投稿", class: 'subbtn'

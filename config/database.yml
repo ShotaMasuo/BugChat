@@ -50,5 +50,8 @@ test:
 production:
   <<: *default
   database: BugChat_production
-  username: BugChat
-  password: <%= ENV['BUGCHAT_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
+  # username: BugChat
+  # password: <%= ENV['BUGCHAT_DATABASE_PASSWORD'] %>

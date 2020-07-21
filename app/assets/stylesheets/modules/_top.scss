@@ -1,0 +1,42 @@
+.login-container{
+  width: 90%;
+  margin: 0 5%;
+  h2{
+    margin-bottom: 10px;
+  }
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+  h1{
+    font-size: 40px;
+    letter-spacing: 1rem;
+    a{
+      text-decoration: none;
+      color: #444;
+    }
+  }
+  .button-wrapper{
+    display: flex;
+    p{
+      width: 58px;
+      margin-right: 5px;
+      display: flex;
+      align-items: center;
+      background-color: #dcdcdc;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .post{
+      background-color: #faebd7;
+    }
+    a{
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      padding: 5px;
+      width: 100%;
+    }
+  }
+}

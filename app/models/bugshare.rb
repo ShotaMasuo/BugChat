@@ -1,0 +1,2 @@
+class Bugshare < ApplicationRecord
+end

@@ -87,6 +87,7 @@ $(function(){
     })
     .done(function(trouble){
       $('.rightwrapper__list').remove();
+      $('#edit-button').remove();
       appendDetail(trouble);
     })
   })

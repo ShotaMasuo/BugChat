@@ -42,11 +42,11 @@ $(function(){
                   </li>
                   <li class="rightwrapper__list__item consider">
                     <p class="title">エラー発生理由：</p>
-                    <p class="content">${trouble.conduct}</p>
-                  </li>
-                  <li class="rightwrapper__list__item conduct">
-                    <p class="title">解決手順：</p>
                     <p class="content">${trouble.consider}</p>
+                  </li>
+                    <li class="rightwrapper__list__item conduct">
+                    <p class="title">解決手順：</p>
+                    <p class="content">${trouble.conduct}</p>
                   </li>
                 </ul>
                 `

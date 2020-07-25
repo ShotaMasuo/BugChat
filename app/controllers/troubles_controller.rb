@@ -35,6 +35,8 @@ class TroublesController < ApplicationController
   end
   def show
     @trouble = Trouble.find(params[:id])
+    @current_user_id = current_user.id
+    @messager = @trouble.user.name
   end
 
   private

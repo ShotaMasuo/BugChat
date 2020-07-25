@@ -4,3 +4,6 @@ json.err_screen @trouble.err_screen
 json.solve_url @trouble.solve_url
 json.conduct @trouble.conduct
 json.consider @trouble.consider
+json.user_id @trouble.user_id
+json.current_user_id @current_user_id
+json.messager @messager

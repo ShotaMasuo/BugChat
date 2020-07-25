@@ -1,13 +1,13 @@
 .formcontainer
   = form_with model: @trouble, local: true do |f|
     .inputcontainer
-      %p エラーメッセージ 
+      %p エラーメッセージ または 実現内容
       = f.text_area :content
       %p エラー画面（Gyazo URL）
       = f.text_field :err_screen
       %p 参考サイトのURL
       = f.text_field :solve_url
-      %p エラーの理由
+      %p エラーの理由 または 実現内容の詳細
       = f.text_area :consider
       %p 解決手順
       = f.text_area :conduct

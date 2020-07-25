@@ -26,13 +26,20 @@ $(function(){
   }
   let detail_list = $(".rightwrapper")
   function appendDetail(trouble){
+    if(trouble.current_user_id == trouble.user_id){
+      let btn = `
+      <div id="edit-button">
+        <a href="/troubles/${trouble.id}/edit">編集</a>
+      </div>
+      `
+      detail_list.append(btn)
+    }
     let html = `
-                <div id="edit-button">
-                  <a href="/troubles/${trouble.id}/edit">編集</a>
-                </div>
+                <p class="messager">${trouble.messager}さんより</p>
                 <ul class="rightwrapper__list">
                   <li class="rightwrapper__list__item errmessage">
-                    <p class="title">エラーメッセージ：</p>
+                    <p class="title">エラーメッセージ：<br>
+                    または 実現内容</p>
                     <p class="content">${trouble.content}</p>
                   </li>
                   <li class="rightwrapper__list__item">
@@ -44,7 +51,8 @@ $(function(){
                     <p class="content"><a href="${trouble.solve_url}" target="_blank" rel="noopener noreferrer">${trouble.solve_url}</a></p>
                   </li>
                   <li class="rightwrapper__list__item consider">
-                    <p class="title">エラー発生理由：</p>
+                    <p class="title">エラー発生理由：<br>
+                    または 実現内容の詳細</p>
                     <p class="content">${trouble.consider}</p>
                   </li>
                     <li class="rightwrapper__list__item conduct">
@@ -86,6 +94,7 @@ $(function(){
       dataType: 'json'
     })
     .done(function(trouble){
+      $('.messager').remove();
       $('.rightwrapper__list').remove();
       $('#edit-button').remove();
       appendDetail(trouble);

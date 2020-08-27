@@ -1,24 +1,38 @@
-# README
+# アプリ名
+BugChat  - チーム内バグ共有サイト -
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+チーム内において、個々人が直面したエラーと解決策や参考サイトを共有し、お互いに知識を深めるサイトです。
 
-Things you may want to cover:
+# 作成した理由
+スクール受講中に、多くのエラーに触れたいと考えたからです。具体的には、自分一人で対面するエラーには限りがあります。しかし、１グループ６人のそれぞれが対面したエラーを共有することで、単純計算で６倍の経験を得ることができると考えました。短期間の受講で、より効果を最大化することを目的に作成いたしました。
 
-* Ruby version
+## 🌐 URL
 
-* System dependencies
+### **http://54.179.112.205:3000/**  
 
-* Configuration
+# 機能
+1. ユーザー機能( devise使用 )
+    1. サインアップ
+    
+    ![BugChatサインアップ](https://user-images.githubusercontent.com/63441901/91505425-85aeed80-e90a-11ea-818e-befeadc71334.gif)
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+    1. ログイン
+    1. ログアウト
+    
+![BugChatログイン](https://user-images.githubusercontent.com/63441901/91505439-8e072880-e90a-11ea-9db8-a46c323f687c.gif)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+1. 一覧表示機能
+    > javascript 非同期通信
+    
+![BugChat詳細](https://user-images.githubusercontent.com/63441901/91505408-7af45880-e90a-11ea-9cba-0299691806e2.gif)
 
-* ...
+    
+1. 新規投稿・編集機能
+
+   新規投稿画面と編集画面は同じです。今回は画像を、Gyazo2に保存し、URLを登録するという仕様になっています。
+   スクールでは、1時間ごとに共有する時間があるので、大量に画像を保存しておく必要がないためGyazo2を採用しました。
+   また、編集画面へのリンクは、投稿したユーザーのみが表示されます。
